@@ -27,13 +27,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.jin.dic.ConvertListener;
+import com.jin.dic.DictIni;
 import com.jin.dic.Engine;
 import com.jin.dic.ks.Index;
 import com.jin.util.StringUtil;
 
 public abstract class DictDataEngine implements Engine {
 
-  public static final String ENCODING     = "UTF-16";
+  public static final String ENCODING     = DictIni.getKscsEncoding();
 
   protected Index            index0       = null;
   protected Index            index1       = null;
@@ -60,24 +61,24 @@ public abstract class DictDataEngine implements Engine {
   }
 
   // for converter
-  static final byte[] LSBYTES        = StringUtil.getBytesNoBom("\r\n", ENCODING);
-  static final String SEPARATOR      = "\t";
+  static final byte[] LSBYTES        = StringUtil.getBytesNoBom(DictIni.getCsLineSepartor(), ENCODING);
+  static final String SEPARATOR      = DictIni.getCsSepartor();
   static final byte[] SEPARATORBYTES = StringUtil.getBytesNoBom(SEPARATOR, ENCODING);
 
   public static final String getInfoFileName(String dictName){
-    return dictName + ".inf";
+    return dictName + DictIni.getCsInfoExtention();
   }
 
   public static final String getIndexFileName(String dictName){
-    return dictName + ".txt";
+    return dictName + DictIni.getCsIndexExtention();
   }
 
   public static final String getDataFileName(String id){
-    return id + ".txt";
+    return id + DictIni.getCsDataExtention();
   }
 
   public static final String getZipFileName(String dictName){
-    return dictName + ".zip";
+    return dictName + DictIni.getCsZipExtention();
   }
 
   // utility
