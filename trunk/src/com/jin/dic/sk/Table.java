@@ -168,7 +168,7 @@ public final class Table implements IRecordSet, IConfigable {
     File file = getFile(cfgFileName);
     if(file.exists()){
       this.cfgFileName = cfgFileName;
-      Configger c = new Configger();
+      Configurer c = new Configurer();
       c.config(file, this);
     }else Logger.err(new Exception("open file error!:" + cfgFileName));
   }
@@ -309,7 +309,7 @@ public final class Table implements IRecordSet, IConfigable {
     s.append(dataFile.toString());
     return s.toString();
   }
-  public Object clone(){//XXX super.clone doesn't work?
+  public Object clone(){//XXX super.clone doesn't work?!
     Table table = new Table();
     table.environment = environment;
     table.firstId = firstId;
