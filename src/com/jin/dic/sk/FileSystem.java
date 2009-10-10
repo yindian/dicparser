@@ -121,7 +121,7 @@ public class FileSystem implements IConfigable {
     }
     if(file.exists()){
       this.cfgFileName = cfgFileName;
-      Configger c = new Configger();
+      Configurer c = new Configurer();
       c.config(file, this);
     }else Logger.err(new Exception("open file error!:" + cfgFileName));
   }

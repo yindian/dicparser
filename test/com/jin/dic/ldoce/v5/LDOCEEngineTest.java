@@ -1,4 +1,4 @@
-package com.jin.dic.ldoce;
+package com.jin.dic.ldoce.v5;
 
 import java.io.File;
 import java.io.FileOutputStream;

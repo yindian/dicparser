@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)Configger.java  2009/03
+ * @(#)Configurer.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@google.com>
  *
@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 import com.jin.dic.sk.i.IConfigable;
 import com.jin.util.Logger;
 
-class Configger {
+class Configurer {
 
   public void config(File file, IConfigable c) throws IOException{
     IniParser ini = null;

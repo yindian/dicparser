@@ -1,4 +1,4 @@
-package com.jin.dic.ldoce;
+package com.jin.dic.ldoce.v4;
 
 import java.io.UnsupportedEncodingException;
 
