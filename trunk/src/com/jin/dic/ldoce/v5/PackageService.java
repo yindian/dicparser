@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
-package com.jin.dic.ldoce;
+package com.jin.dic.ldoce.v5;
 
 import java.util.HashMap;
 import java.util.Map;
