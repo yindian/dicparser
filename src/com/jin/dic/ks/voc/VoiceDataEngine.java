@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.jin.dic.ConvertListener;
-import com.jin.dic.DictIni;
 import com.jin.dic.Engine;
 import com.jin.dic.ks.BadFormatException;
 import com.jin.dic.ks.Index;
@@ -38,23 +37,23 @@ import com.jin.util.StringUtil;
 
 public abstract class VoiceDataEngine implements Engine {
 
-  public static final String       ENCODING    = DictIni.getKscsEncoding();
-  public static final byte[]       LSBYTES     = StringUtil.getBytesNoBom(DictIni.getCsLineSepartor(), ENCODING);
+  public static final String       ENCODING    = "UTF-16";
+  public static final byte[]       LSBYTES     = StringUtil.getBytesNoBom("\r\n", ENCODING);
 
   public static final int          NODATA      = 1;
-  public static final String       KSINDEXFILE = DictIni.getKsVoiceIndexFile();
-  public static final String       RA4DATAFILE = DictIni.getKsVoiceRA4DataFile();
-  public static final String       RA3DATAFILE = DictIni.getKsVoiceRA3DataFile();
-  public static final String       CSINDEXFILE = DictIni.getCsVoiceIndexName();
-  public static final String       CSDATAFILE  = DictIni.getCsVoiceZipName();
+  public static final String       KSINDEXFILE = "MVOX.IDX";
+  public static final String       RA4DATAFILE = "MVOICE0.DAT";
+  public static final String       RA3DATAFILE = "MVOICE1.DAT";
+  public static final String       CSINDEXFILE = "index.txt";
+  public static final String       CSDATAFILE  = "voicedata.zip";
 
   protected static final int       HEADERLEN   = 0x18;
-  protected static final String    keyString   = DictIni.getKsVoiceKey();
+  protected static final String    keyString   = "(C) Copyright by Kingsoft , 1997.(C) Portion by Dex.?";
   protected static byte[]          keyBytes    = null;
   protected static final RC4Engine cipher      = new RC4Engine();
   static{
     try{
-      keyBytes = keyString.getBytes(DictIni.getKsVoiceKeyEncoding());
+      keyBytes = keyString.getBytes("ISO-8859-1");
       keyBytes[keyBytes.length - 1] = 0;
       cipher.init(keyBytes);
     }catch(UnsupportedEncodingException e){
@@ -101,7 +100,7 @@ public abstract class VoiceDataEngine implements Engine {
   }
 
   public static final int[] getWordKey(byte[] bytes){
-    return getWordKey(StringUtil.valueOf(bytes, DictIni.getKsLookupEncoding()));
+    return getWordKey(StringUtil.valueOf(bytes, "ISO-8859-1"));
   }
 
   public static final int[] getWordKey(String word){

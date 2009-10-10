@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
-package com.jin.dic.ldoce;
+package com.jin.dic.ldoce.v4;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

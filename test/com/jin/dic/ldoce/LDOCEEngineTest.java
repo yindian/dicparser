@@ -7,7 +7,7 @@ import java.io.OutputStream;
 
 import junit.framework.TestCase;
 
-import com.jin.dic.ldoce.LDOCEEngine;
+import com.jin.dic.ldoce.v4.LDOCEEngine;
 import com.jin.dic.sk.FSFile;
 import com.jin.util.Logger;
 
