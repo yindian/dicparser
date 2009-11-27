@@ -1,0 +1,449 @@
+Search in
+	none	|0|
+	headword	|1|
+	definition	|2|
+	example	|3|
+	phrases	|4|
+Date
+	8th century	|5|
+	9th century	|6|
+	10th century	|7|
+	11th century	|8|
+	12th century	|9|
+	13th century	|10|
+	14th century	|11|
+	15th century	|12|
+	16th century	|13|
+	17th century	|14|
+	18th century	|15|
+	19th century	|16|
+	20th century	|17|
+Subject
+	ARTS	|18|
+		Architecture	|19|
+		Literature	|20|
+		Media	|21|
+			Film	|22|
+			Television & Radio	|23|
+		Performing	|24|
+			Dance	|25|
+			Music	|26|
+			Theatre	|27|
+		Visual	|28|
+			Design	|29|
+			Painting and Drawing	|30|
+			Sculpture	|31|
+	BUSINESS	|32|
+		Basics	|33|
+			Advertising & Marketing	|34|
+			Business Management	|35|
+			Companies	|36|
+			Offices	|37|
+			Trade	|38|
+		Employment	|39|
+			Conditions of Employment	|40|
+			Labour Relations/Unions	|41|
+			Wages	|42|
+		Finance	|43|
+			Banking	|44|
+			Insurance	|45|
+			Loans	|46|
+			Stocks & Shares	|47|
+		Occupations	|48|
+	COLOURS & SOUNDS	|49|
+		Colours	|50|
+		Shapes/Patterns	|51|
+		Odours	|52|
+		Textures/Sounds	|53|
+		Tastes	|54|
+	DAILY LIFE	|55|
+		Clothes & Fashion	|56|
+			Hair & Beauty	|57|
+			Clothes	|58|
+			Jewellery	|59|
+		Food	|60|
+			Cooking	|61|
+			Drink	|62|
+			Food Dish	|63|
+			Nutrition	|64|
+			Tobacco	|65|
+			Utensils	|66|
+		Games	|67|
+			Board Games	|68|
+			Cards	|69|
+			Darts	|70|
+			Gambling	|71|
+			Other Games	|72|
+		Household	|73|
+			Babies	|74|
+			Cleaning	|75|
+			Furniture	|76|
+			House	|77|
+			Pets	|78|
+			Toys	|79|
+		Leisure	|80|
+			Gardening	|81|
+			Sewing & Knitting	|82|
+			Outdoor	|83|
+			Tourism	|84|
+		Nature	|85|
+		Sport	|86|
+			American Football	|87|
+			Baseball	|88|
+			Cricket	|89|
+			Football	|90|
+			Golf	|91|
+			Horses	|92|
+			Other Sports	|93|
+			Swimming	|94|
+			Tennis	|95|
+	HARD SCIENCE	|96|
+		Astronomy	|97|
+		Biology	|98|
+			Animals	|99|
+			Birds	|100|
+			Fish	|101|
+			Human	|102|
+			Insects	|103|
+			Microbes/Genetics/Biochem	|104|
+			Plants	|105|
+		Chemistry	|106|
+			Compounds	|107|
+			Elements	|108|
+			Plastics	|109|
+		Earth Sciences	|110|
+			Geology	|111|
+			Meteorology	|112|
+			Oceanography	|113|
+		Maths	|114|
+			Numbers	|115|
+			Statistics	|116|
+		Physics	|117|
+			Electricity	|118|
+			Optics	|119|
+	MEDICINE	|120|
+		Alternative Medicine	|121|
+		Birth	|122|
+		Drugs/Medicines	|123|
+			Drug Culture	|124|
+		Hospital	|125|
+		Illness & Disability	|126|
+		Nurses, Doctors, etc	|127|
+		Psychology/Psychiatry	|128|
+		Death	|129|
+	POLITICS	|130|
+		Economics	|131|
+			Currencies	|132|
+			Tax	|133|
+			Welfare	|134|
+		Government	|135|
+			Citizenship	|136|
+			Officials	|137|
+			Parliaments	|138|
+		Military	|139|
+			Army	|140|
+			Defence	|141|
+			Navy	|142|
+			Airforce	|143|
+			Weapons	|144|
+		Politics	|145|
+			Groupings	|146|
+			Policies	|147|
+			Voting	|148|
+
+	RELIGION & THOUGHT	|149|
+		Folklore	|150|
+		Mythology	|151|
+		Occult	|152|
+			Astrology	|153|
+			Magic	|154|
+		Philosophy	|155|
+		Religion	|156|
+			Buddhism	|157|
+			Christianity	|158|
+			Hinduism	|159|
+			Islam	|160|
+			Judaism	|161|
+	SOCIETY	|162|
+		Anthropology	|163|
+			Nationality & Race	|164|
+		Crime & Law	|165|
+			Bombs & Terrorism	|166|
+			Crime	|167|
+			Jail & punishment	|168|
+			Law	|169|
+			Police	|170|
+		Education	|171|
+			College	|172|
+			Pre School	|173|
+			School	|174|
+			Training	|175|
+		Geography	|176|
+			Environment & waste	|177|
+		History	|178|
+		Linguistics	|179|
+			Letters & punctuation	|180|
+			Grammar	|181|
+			Languages	|182|
+		Sociology	|183|
+			Children	|184|
+			Family	|185|
+			Organizations	|186|
+			Race Relations	|187|
+			Women	|188|
+			Youth	|189|
+		Archaeology	|190|
+	TECHNOLOGY	|191|
+		Agriculture	|192|
+			Crops	|193|
+			Forestry	|194|
+			Soil	|195|
+		Building	|196|
+			Buildings	|197|
+			Construction	|198|
+		Communications	|199|
+			Broadcasting	|200|
+			Mail	|201|
+			Newspapers/Printing/Publishing	|202|
+			Photography	|203|
+			Recording	|204|
+			Telephone/Telegraph	|205|
+		Computers	|206|
+		Engineering	|207|
+			Civil	|208|
+			Electrical	|209|
+			Mechanical	|210|
+		Industry	|211|
+			Crafts	|212|
+			Factories	|213|
+			Glass	|214|
+			Material & Textiles	|215|
+			Pottery & Ceramics	|216|
+		Measurement	|217|
+			Chronology	|218|
+			Temperature	|219|
+		Power	|220|
+			Electricity	|221|
+			Gas/Coal/Oil	|222|
+			Wind/Water/Sun	|223|
+		
+		Transport	|224|
+			Air	|225|
+			Bicycles/Carts/Horses	|226|
+			Motor Vehicles	|227|
+			Roads	|228|
+			Space	|229|
+			Trains & Railways	|230|
+			Water	|231|
+		Tools	|232|
+Most frequent spoken words
+	1000	|233|
+	2000	|234|
+	3000	|235|
+Most frequent written words
+	1000	|236|
+	2000	|237|
+	3000	|238|
+Language of origin
+	Afrikaans	|239|
+	Aleut	|240|
+	Algonquian	|241|
+	American Spanish	|242|
+	Anglo-French	|243|
+	Arabic	|244|
+	Aramaic	|245|
+	Arawakan	|246|
+	Australian Aboriginal	|247|
+	Aymara	|248|
+	Bantu	|249|
+	Canadian French	|250|
+	Carib	|251|
+	Catalan	|252|
+	Celtic	|253|
+	Chinese	|254|
+	Czech	|255|
+	Danish	|256|
+	Dharuk	|257|
+	Dutch	|258|
+	Egyptian	|259|
+	English	|260|
+	English dialect	|261|
+	Flemish	|262|
+	French	|263|
+	French dialect	|264|
+	German	|265|
+	German dialect	|266|
+	Germanic	|267|
+	Greek	|268|
+	Hawaiian	|269|
+	Hebrew	|270|
+	Hindi	|271|
+	Hungarian	|272|
+	Icelandic	|273|
+	Irish Gaelic	|274|
+	Italian	|275|
+	Italian dialect	|276|
+	Japanese	|277|
+	Korean	|278|
+	Late Greek	|279|
+	Late Latin	|280|
+	Latin	|281|
+	Louisiana French	|282|
+	Low German	|283|
+	Malay	|284|
+	Maori	|285|
+	Medieval Greek	|286|
+	Medieval Latin	|287|
+	Mexican Spanish	|288|
+	Middle Dutch	|289|
+	Middle High German	|290|
+	Middle Low German	|291|
+	Modern Greek	|292|
+	Modern Latin	|293|
+	Nahuatl	|294|
+	Narragansett	|295|
+	Norwegian	|296|
+	Ojibwa	|297|
+	Old English	|298|
+	Old French	|299|
+	Old Irish	|300|
+	Old Italian	|301|
+	Old Norse	|302|
+	Old North French	|303|
+	Old Provençal	|304|
+	Old Spanish	|305|
+	Persian	|306|
+	Pidgin English	|307|
+	Polish	|308|
+	Portuguese	|309|
+	Provençal	|310|
+	Quechua	|311|
+	Romany	|312|
+	Russian	|313|
+	Sanskrit	|314|
+	Scandinavian	|315|
+	Scottish English	|316|
+	Scottish Gaelic	|317|
+	Spanish	|318|
+	Swedish	|319|
+	Taino	|320|
+	Tamil	|321|
+	Tibetan	|322|
+	Tupi	|323|
+	Turkish	|324|
+	Urdu	|325|
+	Virginia Algonquian	|326|
+	Vulgar Latin	|327|
+	Welsh	|328|
+	West African	|329|
+	Yiddish	|330|
+	Zulu	|331|
+Multimedia
+	Picture	|332|
+	Sound effect	|333|
+Part of speech
+	adjective	|334|
+	adverb	|335|
+	auxiliary verb	|336|
+	conjunction	|337|
+	determiner	|338|
+	interjection	|339|
+	modal verb	|340|
+	noun	|341|
+	number	|342|
+	phrasal verb	|343|
+	predeterminer	|344|
+	prefix	|345|
+	preposition	|346|
+	pronoun	|347|
+	suffix	|348|
+	verb	|349|
+Register
+	biblical	|350|
+	formal	|351|
+	humorous	|352|
+	informal	|353|
+	law	|354|
+	literary	|355|
+	medical	|356|
+	not polite	|357|
+	old use	|358|
+	old-fashioned	|359|
+	spoken	|360|
+	taboo	|361|
+	technical	|362|
+	trademark	|363|
+	written	|364|
+Top category
+	People	|365|
+		architects, designers	|368|
+		artists	|369|
+		business	|370|
+		cinema, TV	|371|
+		crime	|372|
+		dancers	|373|
+		economy, finance	|374|
+		educators	|375|
+		engineers, inventors	|376|
+		explorers, navigators	|377|
+		fashion	|378|
+		heroes	|379|
+		lawyers, judges	|380|
+		writers	|381|
+		medical	|382|
+		military	|383|
+		music	|384|
+		philosophers	|385|
+		political	|386|
+		religious	|387|
+		royal	|388|
+		scientists	|389|
+		social reformers	|390|
+		sports	|391|
+			|365|
+	Places	|366|
+		city	|392|
+		country	|393|
+		feature	|394|
+		region	|395|
+		site	|396|
+	Other	|367|
+		arts, architecture	|397|
+		business,commerce	|398|
+		calendar	|399|
+		ceremonies, traditions	|400|
+		cinema, TV	|401|
+		consumer goods	|402|
+		crime	|403|
+		dance companies	|404|
+		economy, finance	|405|
+		education	|406|
+		environmental	|407|
+		fiction	|408|
+		geographical	|409|
+		history	|410|
+		law	|411|
+		literature	|412|
+		medical	|413|
+		military	|414|
+		musical	|415|
+		mythological names	|416|
+		politics	|418|
+		religious	|419|
+		science	|420|
+		social	|421|
+		sports	|422|
+		theatre	|423|
+		transport	|424|	
+Academic Word List	|426|
+
+
+Dictionary search
+Subject
+Category
+Subcategory
+Subject search
+
+Sub category
+Culture search
+Etymology search

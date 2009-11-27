@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)GetInflatedData.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,30 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.test.util;
+
+import java.io.IOException;
+import java.util.zip.DataFormatException;
+
+import org.jin.dic.data.ks.BadFormatException;
+import org.jin.dic.data.ks.TestFolderConfig;
+import org.jin.dic.data.ks.dic.KSDictDataEngine;
+
+
+public class GetInflatedData {
+
+  /**
+   * @param args
+   * @throws DataFormatException
+   * @throws IOException
+   * @throws BadFormatException
+   */
+  public static void main(String[] args) throws BadFormatException, IOException,
+      DataFormatException{
+    String dictName = "1#500";
+    String fileName = TestFolderConfig.d_myFld + dictName + ".DIC";
+
+    KSDictDataEngine document = new KSDictDataEngine(fileName);
+    document.dump(TestFolderConfig.d_myFld + "/");
+  }
+}

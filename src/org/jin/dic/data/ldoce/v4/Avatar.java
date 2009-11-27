@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Avatar.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,38 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ldoce.v4;
+
+public class Avatar {
+  
+  private int packageId;
+  private int pType;
+  private int fType;
+  private int fileId;
+  
+  public int getPackageId(){
+    return packageId;
+  }
+  public void setPackageId(int packageId){
+    this.packageId = packageId;
+  }
+  public int getPType(){
+    return pType;
+  }
+  public void setPType(int type){
+    pType = type;
+  }
+  public int getFType(){
+    return fType;
+  }
+  public void setFType(int type){
+    fType = type;
+  }
+  public int getFileId(){
+    return fileId;
+  }
+  public void setFileId(int fileId){
+    this.fileId = fileId;
+  }
+
+}

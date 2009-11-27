@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)VoiceDataFile.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,41 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks.voc;
+
+public class VoiceDataFile {
+
+  public final static int RA4      = 4;
+  public final static int RA3      = 3;
+
+  private String          word     = null;
+  private String          fileName = null;
+  private String          id       = null;
+  private int             fileType = 0;
+
+  public String getWord(){
+    return word;
+  }
+  public void setWord(String word){
+    this.word = word;
+  }
+  public String getFileName(){
+    return fileName;
+  }
+  public void setFileName(String fileName){
+    this.fileName = fileName;
+  }
+  public String getId(){
+    return id;
+  }
+  public void setId(String id){
+    this.id = id;
+  }
+  public int getFileType(){
+    return fileType;
+  }
+  public void setFileType(int fileType){
+    this.fileType = fileType;
+  }
+
+}

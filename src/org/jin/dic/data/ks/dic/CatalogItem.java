@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)CatalogItem.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks.dic;
+
+class CatalogItem {
+  
+  private int offset         = 0;
+  private int deflatedLength = 0;
+
+  public int getOffset(){
+    return offset;
+  }
+  public void setOffset(int offset){
+    this.offset = offset;
+  }
+  public int getDeflatedLength(){
+    return deflatedLength;
+  }
+  public void setDeflatedLength(int deflatedLength){
+    this.deflatedLength = deflatedLength;
+  }
+
+}

@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)IRecordDataSource.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.sk.i;
+
+public interface IRecordDataSource extends IDataSource {
+  
+  public int getRecordCount();
+  public IRecord getRecord(int index);
+  public IRecordSet getRecordSet(int off, int count);
+  
+}

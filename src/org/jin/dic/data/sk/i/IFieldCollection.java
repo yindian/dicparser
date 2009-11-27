@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)IFieldCollection.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.sk.i;
+
+public interface IFieldCollection {
+
+  public int getFieldCount();
+  public IField getField(String fieldName);
+  public IField getField(int index);
+  public int getSize();
+
+  public Object clone();
+}

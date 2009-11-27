@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)ElementUtil.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,22 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks;
+
+import java.io.IOException;
+
+import org.jin.util.io._ByteArrayOutputStream;
+import org.jin.util.io._DataOutputStream;
+
+
+public class ElementUtil {
+
+  static public byte[] getBytes(Element element) throws IOException{
+    _ByteArrayOutputStream baos = new _ByteArrayOutputStream();
+    _DataOutputStream ledos = new _DataOutputStream(baos,true);
+    element.write(ledos);
+    ledos.close();
+    return baos.toByteArray();
+  }
+
+}

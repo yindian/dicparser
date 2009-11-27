@@ -1,0 +1,665 @@
+.Entry
+{
+	font-family:Verdana;
+	text-align: justify;
+	display:block;
+	margin-left:15px;
+	margin-top:-15px;
+}
+.ABBR
+{
+	font-weight:bold;
+}
+.ACTIV
+{
+	display:none; 
+}
+.AMEQUIV
+{
+	font-weight:bold;
+}
+.AmEVariant
+{
+}
+.AMEVARPRON
+{
+}
+BOX
+{
+	display:none;
+}
+.BREQUIV
+{
+	font-weight:bold;
+}
+.BrEVariant
+{
+}
+.COLLO
+{
+	font-weight:bold;
+	color:black;
+}
+.ColloExa
+{
+	display:block;
+}
+.COLLOINEXA
+{
+	font-style:italic;
+	font-weight:bold;
+}
+COMMENT
+{
+	display:none;
+}
+.COMP
+{
+	font-weight:bold;
+}
+.Crossref
+{
+}
+
+Crossrefto
+{
+}
+
+.CROSSREFTYPE
+{
+}
+.DEF{
+}
+.GLOSS
+{
+	font-weight:normal;
+	font-style:normal;
+	color:black;
+	font-family:Verdana;
+}
+
+DEF.hidden
+{
+ color: lightgray;
+}
+
+.DERIV
+{
+	font-weight:bold;
+	color:blue;
+}
+
+.Error
+{
+	display:block;
+}
+.Head_Audio{
+}
+.EXAMPLE
+{
+	font-style:italic;
+	display:block;
+	color:black;
+	background-color: #FFFFCC;
+}
+
+FIELD
+{
+	display:none;
+}
+.AC,.FREQ
+{
+margin-right:4px;	
+font-weight:bold;
+	color:white;
+	background-color: magenta;
+
+}
+.EXAMPLE_Audio{}
+.Sense_Audio{}
+.FULLFORM
+{
+	font-weight:bold;
+}
+
+.GEO
+{
+	font-style:italic;
+	color:purple;
+}
+.GRAM
+{
+	color:green;
+}
+.GramExa
+{
+	display:block;
+}
+
+.Entry_Head
+{
+	display:block;
+	margin-left:10px;
+}
+
+.PhrVbEntry_Head
+{
+	display:block;
+	margin-left:0px;
+}
+
+.Hint
+{
+}
+
+.HINTBOLD
+{
+	font-weight:bold;
+}
+
+.HINTITALIC
+{
+	font-style:italic;
+}
+
+.HINTTITLE
+{
+	font-weight:bold;
+}
+
+.HOMNUM
+{
+	vertical-align : super;
+	font-size : 8pt;
+	color: blue;
+	font-weight:bold;
+}
+
+.HOMNUM_keyword
+{
+	vertical-align : super;
+	font-size : 8pt;
+	color: blue;
+	font-weight:bold;
+	color: magenta;
+}
+
+.HWD
+{
+	display:none;
+}
+
+.HYPHENATION
+{
+	font-weight:bold;
+	font-size:120%;
+    color: blue;
+	margin-left:-25px;
+}
+
+.HYPHENATION_keyword
+{
+	font-weight:bold;
+	font-size:120%;
+	color: blue;
+	margin-left:-25px;
+	color: magenta;
+}
+
+.Inflectionsf
+{
+}
+
+.LEXUNIT
+{
+margin-left:0px;
+	font-weight:bold;
+	color:blue;
+}
+
+
+.Head_LEXVAR,.Tail_LEXVAR
+{
+	font-weight:bold;
+	color:blue;
+}
+.ThesBox_LEXVAR
+{
+	color:black;
+}
+.ColloBox_LEXVAR
+{
+	color:black;
+}
+
+.LINKWORD
+{
+	font-family:Times New Roman;
+	font-style:italic;
+}
+
+.NonDV
+{
+	color:blue;
+}
+
+NOTE
+{
+	display:none;
+}
+
+Noteprompt
+{
+	display:none;
+}
+
+.OBJECT
+{
+	font-weight:bold;
+	color:blue;
+}
+
+.OPP
+{
+	font-weight:bold;
+}
+
+.ORTHVAR
+{
+	font-weight:bold;
+	color:blue;
+}
+
+.PASTPART
+{
+	font-weight:bold;
+}
+
+.PASTTENSE
+{
+	font-weight:bold;
+}
+.PhrVbEntry
+{
+	display:block;
+	margin-top:10px;
+	margin-left:15px;
+}
+.PHRVBHWD
+{
+	font-weight:bold;
+	color:blue;
+}
+
+PIC
+{
+	display:none;
+}
+
+PICCAL
+{
+	display:none;
+}
+
+.PLURALFORM
+{
+	font-weight:bold;
+}
+
+.POS
+{
+	font-style:italic;
+}
+
+.PRESPART
+{
+	font-weight:bold;
+}
+
+PRESPARTX
+{
+	font-weight:bold;
+}
+
+.PRON
+{
+}
+
+.PronCodes
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande";
+	font-size:90%;
+}
+
+PronCodes.hidden
+{
+ display: none;
+}
+
+.PROPFORM
+{
+	font-weight:bold;
+	color:blue;
+}
+
+.PROPFORMPREP
+{
+	font-weight:bold;
+	color:blue;
+}
+
+.PTandPP
+{
+	font-weight:bold;
+}
+
+PTandPPX
+{
+	font-weight:bold;
+}
+
+.REFHOMNUM
+{
+	vertical-align : super;
+	font-size:60%;
+}
+
+.REFHWD
+{
+	font-style:normal;
+	font-variant:small-caps;
+}
+
+.REFLEX
+{
+	font-weight:bold;
+}
+
+.REFSENSENUM
+{
+}
+
+.REGISTERLAB
+{
+	font-style:italic;
+	color:purple;
+	font-weight:normal;
+}
+
+.RELATEDWD
+{
+	font-weight:bold;
+}
+
+RunOn
+{
+	display:block;
+}
+
+SEM
+{
+	display:none;
+}
+
+.Sense
+{
+	display:block;
+	margin-left:15px;
+	margin-top:5px;
+}
+.COLLORANGE{}
+.newline
+{
+	display:block;
+}
+
+.SIGNPOST
+{
+margin-left:0px;
+	background-color:blue;
+	color:white;
+	font-weight:bold;
+	font-variant:small-caps;
+}
+
+.SpokenSect
+{
+}
+.PERSON{
+}
+.STRONG
+{
+	font-family : "Verdana";
+	font-style:italic;
+}
+
+.Subsense
+{
+	display:block;
+}
+.Subsense_sensenum{
+	font-style:normal;
+	font-weight:bold;
+	margin-right:8px;
+	color:red;
+	margin-left:0px;	
+}
+
+.SUFFIX
+{
+}
+
+.SUPERL
+{
+	font-weight:bold;
+}
+
+SYN
+{
+	font-weight:bold;
+}
+.T3PERSSING
+{
+	font-weight:bold;
+}
+
+.Variant
+{
+}
+
+EntryAsset span.neutral
+{
+	text-decoration:none;
+}
+.italic
+{
+	font-style:italic;
+	font-weight:normal;
+	font-family:Times New roman; 
+}
+.WARNING{
+	color:magenta;
+	font-weight:bold;
+}
+.infllab
+{
+	font-style:italic;
+	font-weight:normal;
+	font-family:Times New roman; 
+}
+.ILLUSTRATION{}
+.sensenum
+{
+	font-style:normal;
+	font-weight:bold;
+	margin-right:8px;
+	margin-left:-15px;
+	color:red;
+	}
+.i{}
+.synopp
+{
+	font-style:normal;
+	font-weight:bold;
+	color:darkblue;
+}
+.F2NBox, .GramBox{
+	clear:both;
+	display:block;
+	border-style:solid;
+	border-width:1px;
+	border-color:blue;
+	padding:5px; 
+	margin-bottom:5px;
+	margin-right:15px;
+	margin-top:5px;
+}
+F2NBox span.heading{
+	display:block;
+	font-weight:bold;
+	font-size:120%;
+	color:blue;
+	font-variant:small-caps;
+}
+.GramBox_HEADING{
+	display:block;
+	font-weight:bold;
+	font-size:120%;
+	color:blue;
+	font-variant:small-caps;
+}
+.F2NBox_sheading{}
+.ThesBox{
+	clear:both;
+	display:block;
+	border-style:solid;
+	border-width:1px;
+	border-color:#642C91;
+	margin-right:15px;
+	margin-bottom:8px;
+	margin-top:8px;
+}
+.ThesBox_HEADING{
+	display:block;
+	font-weight:bold;
+	font-size:120%;
+	color:white;
+	background-color:#A185BD;
+}
+.ThesBox_sheading{
+display:block;
+	background-color:#A185BD;
+}
+ThesBox SECHEADING:before{
+	content:" ";
+	background-color:#A185BD;
+}
+.ThesBox_SECHEADING{
+	display:block;
+	font-weight:bold;
+	color:white;
+	background-color:#A185BD;
+	margin-left:-5px;
+	margin-right:-5px;
+	font-variant:small-caps;
+}
+.ThesColloBox, .ErrorBox{
+	display:block;
+	margin-left:5px;
+	margin-right:5px;	
+}
+.ColloBox{
+	clear:both;
+	display:block;
+	border-style:solid;
+	border-width:1px;
+	border-color:#1C3E94;
+	margin-right:15px;
+	margin-bottom:8px;
+	margin-top:8px;
+}
+
+.ColloBox_sheading{
+	display:block;
+	font-weight:bold;
+	font-size:120%;
+	color:white;
+	background-color:#1C3E94;
+}
+.ColloBox_sheading:before{
+	content:" ";
+	background-color:#1C3E94;
+}
+.ColloBox_HEADING{
+	display:none;
+	font-weight:bold;
+	color:white;
+	background-color:#8286BF;
+}
+.ColloBox_SECHEADING{
+	display:block;
+	font-weight:bold;
+	color:white;
+	background-color:#8286BF;
+	margin-left:-5px;
+	margin-right:-5px;
+	font-variant:small-caps;
+}
+.Exponent{
+	display:block;
+	margin-top:5px;
+}
+.EXPL{
+	display:block;
+}
+.EXP{
+	font-weight:bold;
+}
+EXP.supp{
+	display:none;
+}
+.EXPR{
+	font-weight:bold;
+}
+.COLLGLOSS{}
+COLLOC.key{
+	color:blue;
+}
+.keycollo{
+	font-weight:bold;
+	color:blue;
+}
+.THESPROPFORM{
+	font-weight:bold;
+}
+.COLLEXA{
+	font-style:italic;
+	background-color: #FFFFCC;
+}
+.THESEXA{
+	font-style:italic;
+	background-color: #FFFFCC;
+}
+.GOODEXA{}
+.BADEXA{}
+.GOODCOLLO{
+	font-style:italic;
+	font-weight:bold;
+}
+.BADCOLLO{
+	font-style:italic;
+}
+.BOOKFILM{}
+.DEFBOLD{
+	font-weight:bold;
+}
+.DATE{}
+.Section{
+	display:block;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+.Ref{
+	text-decoration:none;
+}

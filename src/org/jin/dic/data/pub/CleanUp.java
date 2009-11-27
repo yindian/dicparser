@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)CleanUp.java  2009/11
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,28 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.pub;
+
+import java.io.File;
+import java.io.IOException;
+
+public class CleanUp {
+  
+  public static void main(String[] args) throws IOException{
+    File temp = new File(args[0]);
+    if(temp.exists()){
+      delete(temp);
+    }else temp.mkdir();
+
+    for(int i = 1; i < args.length; i++)
+      new File(args[i]).delete();
+  }
+  private static void delete(File fld){
+    File[] files = fld.listFiles();
+    for(int i = 0; i < files.length; i++){
+      if(files[i].isDirectory()) delete(files[i]);
+      files[i].delete();
+    }
+  }
+
+}

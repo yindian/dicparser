@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)BadFormatException.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,17 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks;
+
+public class BadFormatException extends Exception {
+
+  private static final long serialVersionUID = -2384733116918439215L;
+
+  public BadFormatException(Exception e) {
+    super(e);
+  }
+
+  public BadFormatException(String string) {
+    super(string);
+  }
+}

@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Element.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,18 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
+
+public interface Element {
+  /**
+   * @param para may be the bytes tend to read, or size of sub elements to read
+   */
+  public void read(DataInput in, int para) throws IOException, BadFormatException;
+
+  public void write(DataOutput out) throws IOException;
+
+}

@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)CSVoiceDataEngineTest.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks.voc;
+
+import java.io.IOException;
+
+import org.jin.dic.data.ks.BadFormatException;
+import org.jin.dic.data.ks.TestFolderConfig;
+import org.jin.dic.data.ks.voc.CSVoiceDataEngine;
+
+import junit.framework.TestCase;
+
+
+public class CSVoiceDataEngineTest extends TestCase {
+
+  CSVoiceDataEngine csVoice = null;
+  public void testGetVoiceData() throws IOException, BadFormatException{
+    if(csVoice == null) csVoice = new CSVoiceDataEngine(TestFolderConfig.v_csFolder);
+    assertTrue(!VoiceDataTest.testGetData(csVoice));
+  }
+
+}

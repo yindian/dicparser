@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Engine.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data;
+
+import java.io.FileNotFoundException;
+
+public interface Engine {
+
+  public byte[] getContent(String word);
+
+  public void addConverListener(ConvertListener listener);  
+  public void convert(String desFld) throws FileNotFoundException;
+  
+}
