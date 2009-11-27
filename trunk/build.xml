@@ -1,0 +1,29 @@
+<project name="Dictionary" default="clean" basedir=".">
+	<property name="src" location="../Util/src;src" />
+	<property name="build" location="build" />
+
+	<!-- 加载属性文件 -->
+	<property file="build.properties" />
+	<echo>${container.deploy.dir}</echo>
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build}" />
+	</target>
+
+	<!-- 编译 -->
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" classpath="../lib/dom4j-1.6.1.jar;../lib/jxl.jar;../lib/swt.jar" encoding="utf-8" />
+	</target>
+
+	<!-- 打包 jar -->
+	<target name="makeJar" depends="compile">
+		<jar jarfile="generate-[${DSTAMP}].jar" basedir="${build}" />
+	</target>
+
+	<!-- 清空 -->
+	<target name="clean" depends="makeJar">
+		<delete dir="${build}" />
+	</target>
+
+</project>
