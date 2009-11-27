@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Cast.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.test.java;
+
+public class Cast {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args){
+    byte b1 = (byte) 0x80;
+    byte b2 = (byte) 0x80;
+    int i1 = b1;
+    int i2 = b1 << 8| b2;
+   
+    byte[] bytes = new byte[]{b1,b2};
+    Object objs = new Object[]{bytes,bytes};
+    
+    System.out.println(Integer.toHexString(i1));
+    System.out.println(Integer.toHexString(i2));
+  }
+
+}

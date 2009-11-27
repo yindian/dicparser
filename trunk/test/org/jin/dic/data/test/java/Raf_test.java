@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Raf_test.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,34 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.test.java;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.jin.util.io._RandomAccessFile;
+
+
+public class Raf_test {
+
+  /**
+   * @param args
+   * @throws IOException
+   */
+  public static void main(String[] args) throws IOException{
+    _RandomAccessFile r = new _RandomAccessFile(
+        "D:/Jin/Data/KingSoft/Dict/Data/New Text Document.txt", "r", true);
+    System.out.println(r.readUnsigned24());
+    System.out.println(r.readUnsigned24());
+    System.out.println(r.readUnsigned24());
+    System.out.println(r.readUnsigned24());
+
+    r.seek(0);
+    System.out.println(r.read24());
+    System.out.println(r.read24());
+    System.out.println(r.read24());
+    System.out.println(r.read24());
+
+  }
+
+}

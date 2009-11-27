@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)DictDataFile.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,45 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks.dic;
+
+public class DictDataFile {
+
+  private String word   = null;
+  private String id     = null;
+  private int    length = 0;
+  private int    offset = 0;
+
+  public String getWord(){
+    return word;
+  }
+
+  public void setWord(String word){
+    this.word = word;
+  }
+
+  public String getId(){
+    return id;
+  }
+
+  public void setId(String id){
+    this.id = id;
+  }
+
+  public int getLength(){
+    return length;
+  }
+
+  public void setLength(int length){
+    this.length = length;
+  }
+
+  public int getOffset(){
+    return offset;
+  }
+
+  public void setOffset(int offset){
+    this.offset = offset;
+  }
+
+}

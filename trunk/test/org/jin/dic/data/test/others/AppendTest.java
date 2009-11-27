@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)AppendTest.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.test.others;
+
+import org.jin.dic.data.ks.TestFolderConfig;
+import org.jin.util.io._RandomAccessFile;
+
+
+public class AppendTest {
+
+  /**
+   * @param args
+   * @throws Exception
+   */
+  public static void main(String[] args) throws Exception{
+    _RandomAccessFile f = new _RandomAccessFile(TestFolderConfig.d_myFld + "append.txt", "rw");
+    f.seek(0);
+    f.writeChars("1");
+    f.close();
+  }
+
+}

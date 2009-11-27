@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)LookUpMode.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,35 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.sk.i;
+
+public class LookUpMode {
+  
+  /* These two are the basics ones. */
+  static final int EXACT         = 0;
+  static final int LASTBEFORE    = 1;
+
+  /* These ones are derived. */
+  static final int FIRSTAFTER    = 2;
+  static final int EXACTORBEFORE = 3;
+  static final int EXACTORAFTER  = 4;
+
+  private int      mode;
+
+  public LookUpMode(int mode) {
+    this.mode = mode;
+  }
+  public LookUpMode(String sMode) {
+    if(sMode.equals("EXACT")) mode = EXACT;
+    if(sMode.equals("LASTBEFORE")) mode = LASTBEFORE;
+    if(sMode.equals("FIRSTAFTER")) mode = FIRSTAFTER;
+    if(sMode.equals("EXACTORBEFORE")) mode = EXACTORBEFORE;
+    if(sMode.equals("EXACTORAFTER")) mode = EXACTORAFTER;
+    mode = EXACT;
+  }
+
+  public int getMode(){
+    return mode;
+  }
+  
+}

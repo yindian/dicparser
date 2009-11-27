@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)Index.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,22 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks;
+
+public interface Index extends Element {
+
+  // common properties
+  public int getSize();
+  public int getLength();
+
+  // read from existing data
+  public IndexItem getItem(int index);
+  public IndexItem getItemByOffset(int offset);
+  public int offsetToIndex(int offset);
+
+  // create new index
+  public void clear();
+  public void addItem(IndexItem item);// item offset will be modified
+  public void noMoreItems();
+
+}

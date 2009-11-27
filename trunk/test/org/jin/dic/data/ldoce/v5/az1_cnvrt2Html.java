@@ -1,0 +1,258 @@
+package org.jin.dic.data.ldoce.v5;
+
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
+import org.jin.util.BytesUtil;
+import org.jin.util.StringUtil;
+import org.jin.util.io._ByteArrayInputStream;
+import org.jin.util.io._ByteArrayOutputStream;
+
+public class az1_cnvrt2Html {
+
+  static int count;
+  public static void main(String[] args) throws Exception{
+    String srcFld = "D:/Jin/Alpha/alpha/entry[fs]2";
+    String desFld = "D:/Jin/Alpha/alpha/entry[fs]3";
+
+    getMap();
+    byte[] data;
+    BufferedReader br = null;
+    FileInputStream fis = null;
+    for(int i = 0; i < 51604; i++){
+      try{
+        count = i;
+        fis = new FileInputStream(getFile(srcFld, i));
+        br = new BufferedReader(new InputStreamReader(fis, "utf-8"));
+        FileOutputStream fos = new FileOutputStream(getFile(desFld, i));
+        fos.write(0xff);
+        fos.write(0xfe);
+        data = convert(br.readLine());
+        fos.write(data, 84, data.length - 84);
+        fos.close();
+        // convert(br.readLine());
+      }catch(FileNotFoundException e){
+        e.printStackTrace();
+      }catch(UnsupportedEncodingException e){
+        e.printStackTrace();
+      }catch(IOException e){
+        e.printStackTrace();
+      }finally{
+        try{
+          fis.close();
+        }catch(IOException e){
+          e.printStackTrace();
+        }
+      }
+      if(i % 100 == 0) System.out.println(i);
+    }
+    // saveMap();
+  }
+  static Pattern rmES       = Pattern.compile("<SE_EntryAssets[^>]*>.*?</SE_EntryAssets>");
+  static Pattern rmDummyTag = Pattern.compile("<[^>]*/>");
+  private static byte[] convert(String data) throws DocumentException, IOException{
+    data = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" + rmES.matcher(rmDummyTag.matcher(data).replaceAll("")).replaceAll("");
+    data = data.replaceAll("\\|", ",");
+    _ByteArrayOutputStream bos = new _ByteArrayOutputStream();
+    _ByteArrayInputStream bis = new _ByteArrayInputStream(data.getBytes("utf-8"));
+    SAXReader saxR = null;
+    Document doc = null, des = null;
+    Element root = null, desRoot = null;
+    XMLWriter xmlWriter = null;
+    OutputFormat fmt = null;
+    saxR = new SAXReader();
+    doc = saxR.read(bis);
+    root = doc.getRootElement();
+
+    des = DocumentHelper.createDocument();
+    desRoot = DocumentHelper.createElement("span");
+    desRoot.addAttribute("class", getClass(root));
+    Element child;
+    List children = root.elements();
+    for(int i = 0; i < children.size(); i++){
+      child = (Element) children.get(i);
+      addChildren(child, desRoot);
+    }
+    des.setRootElement(desRoot);
+
+    fmt = OutputFormat.createCompactFormat();
+    fmt.setEncoding("utf-16le");
+    fmt.setTrimText(false);
+    xmlWriter = new XMLWriter(bos, fmt);
+    xmlWriter.write(des);
+    xmlWriter.close();
+    return bos.toByteArray();
+  }
+
+  private static void addChildren(Element s, Element d){
+    Element span = DocumentHelper.createElement("span");
+    d.add(span);
+    if(!s.getName().equalsIgnoreCase("base")){
+      String c;
+      if(s.getName().equals("span")){
+        c = s.attributeValue("class");
+        if(c == null || c.length() == 0){
+          c = null;
+        }else{
+          c = getClass(s);
+        }
+      }else{
+        c = getClass(s);
+      }
+      if(c != null && c.length() > 0) span.addAttribute("class", c);
+    }
+    Iterator i = s.nodeIterator();
+    Node node;
+    while(i.hasNext()){
+      node = (Node) i.next();
+      if(node instanceof Element) addChildren((Element) node, span);
+      else span.add((Node) node.clone());
+    }
+
+  }
+  // private static void addChildren(Element s, Element d){
+  // Element span = DocumentHelper.createElement("span");
+  // if(!s.getName().equalsIgnoreCase("base") && !s.getName().equalsIgnoreCase("span")){
+  // if(getClass(s) != null) span.addAttribute("class", getClass(s));
+  // }
+  // if(s.getText() != null && s.getText().length() > 0) span.setText(s.getText());
+  // d.add(span);
+  // Element child;
+  // List children = s.elements();
+  // for(int i = 0; i < children.size(); i++){
+  // child = (Element) children.get(i);
+  // addChildren(child, span);
+  // }
+  // }
+
+  static Map classNameMap = new LinkedHashMap();
+  private static void getMap() throws Exception{
+    BufferedReader br = null;
+    try{
+      FileInputStream fis = new FileInputStream("alpha/className_list.txt");
+      br = new BufferedReader(new InputStreamReader(fis, "unicode"));
+      String line;
+      String[] info;
+      while((line = br.readLine()) != null){
+        info = line.split("\t");
+        if(info == null || info.length != 2){
+          continue;
+        }
+        classNameMap.put(info[0], info[1]);
+      }
+    }finally{
+      if(br != null) br.close();
+    }
+  }
+  private static void saveMap() throws IOException{
+    String encoding = "unicode";
+    String outFileName = "alpha/className_list.txt";
+    File file = new File(outFileName);
+    OutputStream os = null;
+    os = new BufferedOutputStream(new FileOutputStream(file));
+    os.write(0xff);
+    os.write(0xfe);
+    Set s = classNameMap.entrySet();
+    Iterator i = s.iterator();
+    Entry entry;
+    while(i.hasNext()){
+      entry = (Entry) i.next();
+      os.write(StringUtil.getBytesNoBom((String) entry.getKey(), encoding));
+      os.write(StringUtil.getBytesNoBom("\t", encoding));
+      os.write(StringUtil.getBytesNoBom((String) entry.getValue(), encoding));
+      os.write(StringUtil.getBytesNoBom("\r\n", encoding));
+    }
+    os.close();
+  }
+
+  private static String getClass(Element e){
+    String name = getFullClassName(new StringBuffer(), e);
+    // classNameMap.put(name, name);
+    name = (String) classNameMap.get(name);
+    if(name == null) System.out.println(getFullClassName(new StringBuffer(), e));
+    return name;
+  }
+  private static String getFullClassName(StringBuffer s, Element e){
+    if(e != null){
+      if(s.length() > 0) s.insert(0, "_");
+      s.insert(0, getElementStyleName(e));
+      getFullClassName(s, e.getParent());
+    }
+    return s.toString();
+  }
+  private static String getElementStyleName(Element e){
+    StringBuffer s = new StringBuffer();
+    s.append(e.getName());
+    if(e.attributeValue("class") != null){
+      s.append("_");
+      s.append(e.attributeValue("class"));
+    }
+    if(e.attributeValue("style") != null){
+      s.append("_");
+      s.append(e.attributeValue("style"));
+    }
+    if(e.attributeValue("type") != null){
+      s.append("_");
+      s.append(e.attributeValue("type"));
+    }
+    return s.toString();
+  }
+  private static File getFile(String fld, int num) throws IOException{
+    File folder;
+    StringBuffer a = new StringBuffer();
+    a.append(fld);
+    a.append("/");
+    int mark;
+
+    mark = a.length();
+    a.append(num / 10000);
+    while(a.length() - mark < 5)
+      a.insert(mark, "0");
+    folder = new File(a.toString());
+    if(!folder.exists()) folder.mkdir();
+    a.append("/");
+
+    mark = a.length();
+    a.append(num / 100);
+    while(a.length() - mark < 7)
+      a.insert(mark, "0");
+    folder = new File(a.toString());
+    if(!folder.exists()) folder.mkdir();
+    a.append("/");
+
+    mark = a.length();
+    a.append(num);
+    while(a.length() - mark < 9)
+      a.insert(mark, "0");
+
+    a.append(".xml");
+    File file = new File(a.toString());
+    file.createNewFile();
+    return file;
+  }
+}

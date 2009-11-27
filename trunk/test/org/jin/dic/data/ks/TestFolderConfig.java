@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)TestFolderConfig.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.ks;
+
+public class TestFolderConfig {
+  
+  public static String v_original = "D:/Jin/Data/Dictionary/KingSoft/Voice/ORIGINAL_DATA";
+  public static String v_csFolder = "D:/Jin/Data/Dictionary/KingSoft/Voice/MAKE";
+  public static String v_common   = "C:/Program Files/Common Files/kingsoft/Extract/Sound";
+  public static String d_ksFld05  = "C:/Program Files/Kingsoft/PowerWord 2005/DICTS/";
+  public static String d_myFld    = "D:/Jin/Work/WorkSpace/Dictionary/data/kingsoft/";
+  public static String d_ksFld09  = "C:/Program Files/Kingsoft/PowerWord_Pro/plugin/CBDict08/dicts/";
+
+}

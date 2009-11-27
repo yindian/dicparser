@@ -1,6 +1,6 @@
 /*****************************************************************************
  * 
- * @(#)@filename@  @date@
+ * @(#)EngineTest.java  2009/03
  *
  *  Copyright (C) 2009  Tim Bron<jinxingquan@gmail.com>
  *
@@ -18,3 +18,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *****************************************************************************/
+package org.jin.dic.data.sk;
+
+import org.jin.dic.data.sk.Table;
+import org.jin.dic.data.sk.i.IRecord;
+
+public class EngineTest {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args){
+    String index = "C:/Program Files/Longman/ldoce4v2/data/index/doc.skn/config.cft";
+    Table table = new Table();
+    table.setConfigFileName(index);
+    table.bind();
+    IRecord record = table.getRecord(48937);
+    System.out.println(new String(record.getDataFieldValue("doc")));
+    table.unBind(false);
+  }
+
+}
